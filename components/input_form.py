@@ -14,7 +14,7 @@ def user_input_form():
 
         if submitted:
             if not journal.strip() or not dream.strip() or not intention.strip() or not priorities.strip():
-                st.error("⚠️ All fields are required. Please fill out the complete form.")
+                st.error("All fields are required. Please fill out the complete form.")
                 return False, journal, dream, intention, priorities
 
         return submitted, journal, dream, intention, priorities

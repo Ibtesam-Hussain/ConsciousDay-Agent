@@ -4,7 +4,7 @@ from db.database import authenticate_user, register_user
 
 st.set_page_config(page_title="Login - ConsciousDay Agent", layout="centered", initial_sidebar_state="collapsed")
 
-st.title("🔐 Login to ConsciousDay Agent")
+st.title("Login to ConsciousDay Agent")
 
 
 login_tab, signup_tab = st.tabs(["Login", "Sign Up"])
@@ -18,14 +18,14 @@ with login_tab:
 
     if st.button("Login"):
         if authenticate_user(username, password):
-            st.success("✅ Login successful!")
+            st.success("Login successful!")
             st.session_state["authenticated"] = True
             st.session_state["username"] = username
 
             # Redirect to main app (Streamlit 1.22+)
             st.switch_page("pages/Homepage.py")
         else:
-            st.error("❌ Invalid username or password.")
+            st.error("Invalid username or password.")
 
 with signup_tab:
     st.subheader("Create New Account")
@@ -37,4 +37,4 @@ with signup_tab:
         if register_user(new_username, new_password):
             st.success("Account created! Please log in.")
         else:
-            st.warning("⚠️ Username already exists.")
+            st.warning("Username already exists.")

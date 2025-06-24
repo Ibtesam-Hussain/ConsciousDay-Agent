@@ -10,7 +10,7 @@ if "authenticated" not in st.session_state or not st.session_state["authenticate
 
 username = st.session_state["username"]
 
-st.title("📜 View Previous Reflections")
+st.title("View Previous Reflections")
 selected_date = st.date_input("📅 Choose a date to view entries:")
 selected_date_str = selected_date.strftime("%Y-%m-%d")
 
@@ -23,7 +23,7 @@ try:
 
         for i, entry in enumerate(entries, start=1):
             st.markdown("---")
-            st.markdown(f"### 📝 Entry #{i}")
+            st.markdown(f"### Entry #{i}")
             
             st.subheader("📝 Journal")
             st.write(entry[2])
@@ -38,6 +38,6 @@ try:
 
 except sqlite3.OperationalError as e:
     # Catch DB schema issues
-    st.error("⚠️ Could not load entries. The database may be missing the required columns.")
+    st.error("Could not load entries. The database may be missing the required columns.")
     st.exception(e)
     st.info("Try reinitializing your database or contacting the developer.")

@@ -56,7 +56,7 @@ submitted, journal, dream, intention, priorities = user_input_form()
 if submitted:
     # Validate all fields before continuing
     if not journal or not dream or not intention or not priorities:
-        st.error("⚠️ Please fill in all fields before submitting.")
+        st.error("Please fill in all fields before submitting.")
     else:
         with st.spinner("Generating your reflection and day strategy..."):
             response = run_agent(journal, intention, dream, priorities)
@@ -73,7 +73,7 @@ if submitted:
                 username
             )
 
-            st.success("✅ Saved Successfully!")
+            st.success("Saved Successfully!")
 
 # Footer (model info)
 st.markdown(
