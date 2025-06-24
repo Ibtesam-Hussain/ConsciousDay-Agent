@@ -27,15 +27,6 @@ An intelligent **daily reflection and planning assistant** built with `Streamlit
 - `Python-dotenv` (Environment secrets)
 
 ---
-
-## 🔧 Setup Instructions
-
-1. **Clone the repo**:
-```bash
-    git clone https://github.com/your-username/ConsciousDay-Agent.git
-    cd ConsciousDay-Agent
-```bash
-
 ## 🧪 Sample Input
 
 **Journal:**
@@ -96,6 +87,38 @@ An intelligent **daily reflection and planning assistant** built with `Streamlit
 ---
 
 > Made with ❤️ for mental clarity and intentional living.
+
+
+## Clone the Repo
+
+```bash
+git clone https://github.com/your-username/ConsciousDay-Agent.git
+cd ConsciousDay-Agent
+```
+
+##  Create a Virtual Environment (Optional but Recommended)
+```bash
+python -m venv venv
+venv\Scripts\activate    # On Windows
+# OR
+source venv/bin/activate  # On macOS/Linux
+```
+
+##  Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+##  Set Up Environment Variables
+Create a .env file in the root directory
+```bash
+OPENROUTER_API_KEY=your_openrouter_api_key
+```
+##  Run the App
+```bash
+streamlit run app.py
+```
+    
 
 
 
