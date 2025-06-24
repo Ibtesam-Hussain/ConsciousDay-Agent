@@ -32,9 +32,9 @@ An intelligent **daily reflection and planning assistant** built with `Streamlit
 
 1. **Clone the repo**:
 ```bash
-git clone https://github.com/your-username/ConsciousDay-Agent.git
-cd ConsciousDay-Agent
-
+    git clone https://github.com/your-username/ConsciousDay-Agent.git
+    cd ConsciousDay-Agent
+```bash
 
 ## 🧪 Sample Input
 
